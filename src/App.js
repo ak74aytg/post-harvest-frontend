@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Homepage from "./Pages/Homepage";
+import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import GrainQuality from "./Pages/GrainQuality";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/grains-quality" element={<GrainQuality />} />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }
