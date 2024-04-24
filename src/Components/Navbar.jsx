@@ -14,31 +14,29 @@ const nav_items = [
     text: "View Grain Quality",
     link: "/grains-quality",
     key: "2",
-  },
+  }
   ,
   {
     text: "Upload Images",
-    link: "/",
+    link: "/upload-image",
     key: "3",
-  },
+  }
   ,
   {
     text: "Resources",
-    link: "/",
+    link: "/resources",
     key: "4",
   },
-  ,
   {
     text: "About Us",
-    link: "/",
+    link: "/about",
     key: "5",
   },
-  ,
   {
     text: "Contact",
-    link: "/",
+    link: "/contact",
     key: "6",
-  },
+  }
 ];
 
 function Navbar() {
@@ -56,15 +54,16 @@ function Navbar() {
     <div className="z-30 top-0 fixed w-full">
       <nav className="bg-white border-gray-200">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a
-            href="#"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <img src={logo} className="h-14" alt="Flowbite Logo" />
-            <span className="roboto-bold nav-green self-center text-2xl font-semibold whitespace-nowrap">
-              Grain Nation
-            </span>
-          </a>
+          <Link to="/">
+            <p
+              className="flex items-center space-x-3 rtl:space-x-reverse"
+            >
+              <img src={logo} className="h-14" alt="Flowbite Logo" />
+              <span className="roboto-bold nav-green self-center text-2xl font-semibold whitespace-nowrap">
+                Grain Nation
+              </span>
+            </p>
+          </Link>
           <button
             onClick={toggleMenu}
             data-collapse-toggle="navbar-default"

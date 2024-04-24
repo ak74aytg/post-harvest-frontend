@@ -74,7 +74,7 @@ function DisplayBars(props) {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col gap-5 mt-5 items-center">
         <BarGraph
           x_axis={props.cultivarList}
           y_axis={protein_content}

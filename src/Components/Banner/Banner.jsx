@@ -4,7 +4,7 @@ import img7 from "../../Assests/img7.jpg";
 
 function Banner() {
   return (
-    <div className="relative mt-83">
+    <div className="relative">
       <div className="banner w-full md:px-8 lg:px-12 xl:px-20 py-8 md:py-12 px-4">
         <div className="flex flex-wrap items-end justify-between">
           <div className="md:w-1/2 w-2/3 md:leading-loose">

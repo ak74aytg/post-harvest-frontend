@@ -42,7 +42,7 @@ function BarGraph(props) {
 
   return (
     <div className="px-5">
-      <div>
+      <div className="bg-white rounded p-5">
         <Bar
           data={data}
           options={{

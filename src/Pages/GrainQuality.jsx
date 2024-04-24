@@ -23,14 +23,18 @@ function GrainQuality() {
   const [graphData, setGraphData] = useState([]);
 
   const getGraphData = async (cultivarId) => {
-    const result = await axios.get(
-      `http://localhost:8080/api/grain-quality?cid=${cultivarId}`
-    );
-    setGraphData(result.data);
+    try {
+      const result = await axios.get(
+        `http://localhost:8080/api/grain-quality?cid=${cultivarId}`
+      );
+      setGraphData(result.data);
+    } catch (error) {
+      console.error();
+    }
   };
 
   return (
-    <div className="mt-83">
+    <div className="text-black-800 pt-5" sx={{ "background-color": "#f4f4f4" }}>
       <div className="mt-8 md:px-1 px-5">
         <h1 className="text-center text-xl md:text-3xl font-semibold nav-green mb-5">
           View Grain Quality

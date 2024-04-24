@@ -31,6 +31,7 @@ function Graph(props) {
     field_fissures.push(details.field_fissures);
     lipid_content.push(details.lipid_content);
     protein_content.push(details.protein_content);
+    return details;
   })
   const data = {
     labels: years,
@@ -58,7 +59,7 @@ function Graph(props) {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="w-full">
+      <div className="w-full bg-white mb-5 rounded p-5">
         <Line
           options={{
             responsive: true,

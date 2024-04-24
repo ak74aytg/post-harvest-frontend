@@ -48,7 +48,7 @@ function Dropdowns(props) {
             ))}
           </select>
         </div>
-        <TableContainer sx={{ "max-width": "300px" }}>
+        <TableContainer className="bg-white my-1" sx={{ "max-width": "300px" }}>
           <Table aria-label="simple table">
             <TableHead>
               <TableRow>
